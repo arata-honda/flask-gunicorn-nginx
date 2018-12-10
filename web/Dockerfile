@@ -5,3 +5,7 @@ WORKDIR /usr/src/app
 ADD requirements.txt /usr/src/app/
 RUN pip install -r requirements.txt
 ADD . /usr/src/app/
+# sampleファイルをadd
+ADD flask_sample.py ./usr/src/app/
+# 実行
+CMD ["python", "/usr/src/app/flask_sample.py"]
