@@ -8,4 +8,4 @@ ADD . /usr/src/app/
 # sampleファイルをadd
 ADD flask_sample.py ./usr/src/app/
 # 実行
-CMD ["gunicorn", "flask_sample:app", "-b", "0.0.0.0:5000"]
+CMD ["gunicorn", "flask_sample:app", "-b", ":5000"]
