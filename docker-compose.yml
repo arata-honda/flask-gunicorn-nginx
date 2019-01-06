@@ -1,13 +1,12 @@
 version: '3'
-
 services:
-
   web:
     build: ./web
+    container_name: web
+    expose:
+      - 5000
     networks:
       - nginx_network
-    ports:
-      - 8000:5000
 
   nginx:
     build: ./nginx
